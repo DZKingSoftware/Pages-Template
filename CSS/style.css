@@ -4,6 +4,7 @@
     font-family: 'Cardo';
     font-weight: 400 !important;
     transition: 0.5s;
+    scroll-behavior: smooth;
 }
 html,
 body {
@@ -75,6 +76,23 @@ li {
 }
 /* Spinner */
 
+/* Up Arrow */
+#up {
+    position: fixed;
+    bottom: 20px;
+    z-index: 100;
+}
+#up i {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+}
+/* Up Arrow */
+
 /* Navbar */
 .navbar-container {
     width: 100%;
@@ -101,7 +119,7 @@ li {
 #navbar .nav-list .nav-icons.res {
     display: none;
 }
-#navbar .logo .nav-icons .nav-icon {
+#navbar .logo .nav-icons .nav-icon.one i {
     width: 50px;
     height: 50px;
     display: flex;
@@ -110,18 +128,19 @@ li {
     margin-left: 10px;
     background-color: var(--white-color);
     border: 1px solid var(--white-color);
+    color: var(--blue-color);
     transition: 0.5s ease-in-out;
 }
-#navbar .nav-list .nav-icons .nav-icon:hover {
-    background-color: transparent;
+#navbar .logo .nav-icons.one .nav-icon.one:hover i {
+    background-color: var(--blue-color);
 }
-#navbar .nav-list .nav-icons .nav-icon.one:hover i {
+#navbar .logo .nav-icons.one .nav-icon.one:hover i {
     color: var(--white-color);
 }
-#navbar .nav-list .nav-icons.one .nav-icon i {
+#navbar .logo .nav-icons.one .nav-icon.one i {
     color: var(--blue-color);
 }
-#navbar .nav-list .nav-icons .nav-icon {
+#navbar .nav-list .nav-icons .nav-icon i {
     width: 50px;
     height: 50px;
     display: flex;
@@ -130,9 +149,10 @@ li {
     margin-left: 10px;
     background-color: var(--white-color);
     border: 1px solid var(--white-color);
+    color: var(--blue-color);
     transition: 0.5s ease-in-out;
 }
-#navbar .nav-list .nav-icons .nav-icon:hover {
+#navbar .nav-list .nav-icons .nav-icon:hover i {
     background-color: transparent;
 }
 #navbar .nav-list .nav-icons .nav-icon:hover i {
@@ -161,6 +181,12 @@ li {
 }
 #navbar .nav-list .nav-item:hover a {
     color: var(--yellow-color);
+}
+#navbar .nav-list .nav-item a span {
+    color: var(--yellow-color);
+}
+#navbar .nav-list .nav-item:hover span {
+    color: var(--white-color);
 }
 #navbar .nav-list .nav-btn {
     width: 220px;

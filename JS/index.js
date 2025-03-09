@@ -3,7 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const Spinner = document.querySelector('#spinner');
         Spinner.classList.add('spinner');
     }, 10)
-})
+});
+
+// Up Arrow
+
+function UpArrow() {
+    const UpArrow = document.getElementById('up');
+    
+    UpArrow.style.right = '-100px';
+
+    window.addEventListener('scroll', () => {
+        let top = window.scrollY;
+        if(top > 160) {
+            UpArrow.style.right = '10px';
+        } else {
+            UpArrow.style.right = '-100px';
+        };
+    });
+};
+
+UpArrow();
 
 // Navbar
 function Navbar() {
@@ -11,20 +30,20 @@ function Navbar() {
     const NavBars = document.querySelector('.nav-bars');
 
     NavBars.addEventListener('click', () => {
-        NavbarList.classList.toggle('nav-listres')
+        NavbarList.classList.toggle('nav-listres');
     });
 
     window.onscroll = function () {
-        const NavbarContainer = document.querySelector('.navbar-container')
+        const NavbarContainer = document.querySelector('.navbar-container');
         if(window.scrollY > 5) {
             NavbarContainer.style.position = 'fixed';
             NavbarContainer.style.padding = '15px'
         } else {
             NavbarContainer.style.position = 'relative';
-            NavbarContainer.style.padding = '10px'
-        }
-    }
-}
+            NavbarContainer.style.padding = '10px';
+        };
+    };
+};
 
 Navbar();
 
@@ -62,32 +81,32 @@ var slider = tns({
 
 function Vision() {
     const VisionCard = document.querySelectorAll('.vision-chapter.click').forEach(vision => {
-        vision.style.maxHeight = '60px'
+        vision.style.maxHeight = '60px';
         vision.addEventListener('click', () => {
             if(vision.style.maxHeight == '60px') {
                 vision.style.maxHeight = '300px'
             } else {
                 vision.style.maxHeight = '60px'
-            }
-        })
-    })
-}
+            };
+        });
+    });
+};
 
-Vision()
+Vision();
 
 // Footer
 
 function Footer() {
     const FooterCard = document.querySelectorAll('.footer-card.res').forEach(footer => {
-        footer.style.maxHeight = '30px'
+        footer.style.maxHeight = '30px';
         footer.addEventListener('click', () => {
             if(footer.style.maxHeight == '30px') {
                 footer.style.maxHeight = '300px'
             } else {
                 footer.style.maxHeight = '30px'
-            }
-        })
-    })
-}
+            };
+        });
+    });
+};
 
-Footer()
+Footer();
